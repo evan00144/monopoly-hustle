@@ -7,34 +7,138 @@
 [node name="board" type="Node3D"]
 script = ExtResource("1_axtoh")
 
-[node name="Cell" parent="." instance=ExtResource("2_xxxjo")]
+[node name="CellsBig" type="Node" parent="."]
 
-[node name="Cell1" parent="." instance=ExtResource("3_k6sl3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.77276)
+[node name="CellBig1" parent="CellsBig" instance=ExtResource("2_xxxjo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.25985)
 
-[node name="Cell2" parent="." instance=ExtResource("3_k6sl3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.07244)
+[node name="CellBig2" parent="CellsBig" instance=ExtResource("2_xxxjo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.2142)
 
-[node name="Cell3" parent="." instance=ExtResource("3_k6sl3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.47992)
+[node name="CellBig3" parent="CellsBig" instance=ExtResource("2_xxxjo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.297, 0, 15.3014)
 
-[node name="Cell4" parent="." instance=ExtResource("3_k6sl3")]
+[node name="CellBig4" parent="CellsBig" instance=ExtResource("2_xxxjo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.297, 0, 0.300422)
+
+[node name="Cells" type="Node" parent="."]
+
+[node name="Cell1" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.03189)
+
+[node name="Cell2" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.33185)
+
+[node name="Cell3" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.56066)
+
+[node name="Cell4" parent="Cells" instance=ExtResource("3_k6sl3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.77515)
 
-[node name="Cell5" parent="." instance=ExtResource("3_k6sl3")]
+[node name="Cell5" parent="Cells" instance=ExtResource("3_k6sl3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.04523)
 
-[node name="Cell6" parent="." instance=ExtResource("3_k6sl3")]
+[node name="Cell6" parent="Cells" instance=ExtResource("3_k6sl3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.26908)
 
-[node name="Cell7" parent="." instance=ExtResource("3_k6sl3")]
+[node name="Cell7" parent="Cells" instance=ExtResource("3_k6sl3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.53727)
 
-[node name="Cell8" parent="." instance=ExtResource("3_k6sl3")]
+[node name="Cell8" parent="Cells" instance=ExtResource("3_k6sl3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.8325)
 
-[node name="Cell9" parent="." instance=ExtResource("3_k6sl3")]
+[node name="Cell9" parent="Cells" instance=ExtResource("3_k6sl3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.1026)
 
-[node name="Cell10" parent="." instance=ExtResource("3_k6sl3")]
+[node name="Cell10" parent="Cells" instance=ExtResource("3_k6sl3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.3264)
+
+[node name="Cell11" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(0.0100529, 0, 0.999949, 0, 1, 0, -0.999949, 0, 0.0100529, 1.88499, 0, 15.2306)
+
+[node name="Cell12" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(0.0100529, 0, 0.999949, 0, 1, 0, -0.999949, 0, 0.0100529, 3.1846, 0, 15.2437)
+
+[node name="Cell13" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(0.0100529, 0, 0.999949, 0, 1, 0, -0.999949, 0, 0.0100529, 4.59201, 0, 15.2578)
+
+[node name="Cell14" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(0.0100529, 0, 0.999949, 0, 1, 0, -0.999949, 0, 0.0100529, 5.88717, 0, 15.2708)
+
+[node name="Cell15" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(0.0100529, 0, 0.999949, 0, 1, 0, -0.999949, 0, 0.0100529, 7.1572, 0, 15.2836)
+
+[node name="Cell16" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(0.0100529, 0, 0.999949, 0, 1, 0, -0.999949, 0, 0.0100529, 8.38098, 0, 15.2959)
+
+[node name="Cell17" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(0.0100529, 0, 0.999949, 0, 1, 0, -0.999949, 0, 0.0100529, 9.64911, 0, 15.3087)
+
+[node name="Cell18" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(0.0100529, 0, 0.999949, 0, 1, 0, -0.999949, 0, 0.0100529, 10.9443, 0, 15.3217)
+
+[node name="Cell19" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(0.0100529, 0, 0.999949, 0, 1, 0, -0.999949, 0, 0.0100529, 12.2143, 0, 15.3344)
+
+[node name="Cell20" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(0.0100529, 0, 0.999949, 0, 1, 0, -0.999949, 0, 0.0100529, 13.4381, 0, 15.3467)
+
+[node name="Cell21" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.999983, 0, 0.00581193, 0, 1, 0, -0.00581193, 0, -0.999983, 15.2842, 0.00651026, 13.5764)
+
+[node name="Cell22" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.999983, 0, 0.00581193, 0, 1, 0, -0.00581193, 0, -0.999983, 15.2918, 0.00651026, 12.2767)
+
+[node name="Cell23" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.999983, 0, 0.00581193, 0, 1, 0, -0.00581193, 0, -0.999983, 15.3, 0.00651026, 10.8693)
+
+[node name="Cell24" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.999983, 0, 0.00581193, 0, 1, 0, -0.00581193, 0, -0.999983, 15.3075, 0.00651026, 9.57405)
+
+[node name="Cell25" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.999983, 0, 0.00581193, 0, 1, 0, -0.00581193, 0, -0.999983, 15.3149, 0.00651026, 8.30399)
+
+[node name="Cell26" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.999983, 0, 0.00581193, 0, 1, 0, -0.00581193, 0, -0.999983, 15.322, 0.00651026, 7.08016)
+
+[node name="Cell27" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.999983, 0, 0.00581193, 0, 1, 0, -0.00581193, 0, -0.999983, 15.3294, 0.00651026, 5.81199)
+
+[node name="Cell28" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.999983, 0, 0.00581193, 0, 1, 0, -0.00581193, 0, -0.999983, 15.3369, 0.00651026, 4.51679)
+
+[node name="Cell29" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.999983, 0, 0.00581193, 0, 1, 0, -0.00581193, 0, -0.999983, 15.3443, 0.00651026, 3.24672)
+
+[node name="Cell30" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.999983, 0, 0.00581193, 0, 1, 0, -0.00581193, 0, -0.999983, 15.3514, 0.00651026, 2.0229)
+
+[node name="Cell31" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.00490433, 0, -0.999988, 0, 1, 0, 0.999988, 0, -0.00490433, 13.4634, 0.00651026, 0.329248)
+
+[node name="Cell32" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.00490433, 0, -0.999988, 0, 1, 0, 0.999988, 0, -0.00490433, 12.1637, 0.00651026, 0.322875)
+
+[node name="Cell33" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.00490433, 0, -0.999988, 0, 1, 0, 0.999988, 0, -0.00490433, 10.7563, 0.00651026, 0.315971)
+
+[node name="Cell34" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.00490433, 0, -0.999988, 0, 1, 0, 0.999988, 0, -0.00490433, 9.46104, 0.00651026, 0.30962)
+
+[node name="Cell35" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.00490433, 0, -0.999988, 0, 1, 0, 0.999988, 0, -0.00490433, 8.19097, 0.00651026, 0.303389)
+
+[node name="Cell36" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.00490433, 0, -0.999988, 0, 1, 0, 0.999988, 0, -0.00490433, 6.96714, 0.00651026, 0.297387)
+
+[node name="Cell37" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.00490433, 0, -0.999988, 0, 1, 0, 0.999988, 0, -0.00490433, 5.69896, 0.00651026, 0.291168)
+
+[node name="Cell38" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.00490433, 0, -0.999988, 0, 1, 0, 0.999988, 0, -0.00490433, 4.40375, 0.00651026, 0.284816)
+
+[node name="Cell39" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.00490433, 0, -0.999988, 0, 1, 0, 0.999988, 0, -0.00490433, 3.13368, 0.00651026, 0.278587)
+
+[node name="Cell40" parent="Cells" instance=ExtResource("3_k6sl3")]
+transform = Transform3D(-0.00490433, 0, -0.999988, 0, 1, 0, 0.999988, 0, -0.00490433, 1.90985, 0.00651026, 0.272585)

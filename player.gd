@@ -6,6 +6,13 @@ const JUMP_VELOCITY = 4.5
 
 
 func _physics_process(delta: float) -> void:
+	
+	# Rotate camera left / right
+	if Input.is_action_just_pressed("cam_left"):
+		$Camera_Controller.rotate_y(deg_to_rad(30))
+	elif Input.is_action_just_pressed("cam_right"):
+		$Camera_Controller.rotate_y(deg_to_rad(-30))
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -15,9 +22,10 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	# New Vector3 direction, taking into account the user inputs and the camera rotation
+	var direction: Vector3 = ($Camera_Controller.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -26,3 +34,6 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+	# Make Camera Controller Match the position of myself
+	$Camera_Controller.position = lerp($Camera_Controller.position, position, 0.15)
