@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdg0kedf8gcs4"]
+
+[ext_resource type="Script" path="res://test.gd" id="1_axtoh"]
+[ext_resource type="PackedScene" uid="uid://csdqf7i3uj5xj" path="res://scenes/cell-big.tscn" id="2_xxxjo"]
+[ext_resource type="PackedScene" uid="uid://djmh4wank4v5h" path="res://scenes/cell.tscn" id="3_k6sl3"]
+
+[node name="board" type="Node3D"]
+script = ExtResource("1_axtoh")
+
+[node name="Cell" parent="." instance=ExtResource("2_xxxjo")]
+
+[node name="Cell1" parent="." instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.77276)
+
+[node name="Cell2" parent="." instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.07244)
+
+[node name="Cell3" parent="." instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.47992)
+
+[node name="Cell4" parent="." instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.77515)
+
+[node name="Cell5" parent="." instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.04523)
+
+[node name="Cell6" parent="." instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.26908)
+
+[node name="Cell7" parent="." instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.53727)
+
+[node name="Cell8" parent="." instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.8325)
+
+[node name="Cell9" parent="." instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.1026)
+
+[node name="Cell10" parent="." instance=ExtResource("3_k6sl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.3264)

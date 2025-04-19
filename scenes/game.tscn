@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ef0iix4chr1"]
+
+[ext_resource type="PackedScene" uid="uid://bdg0kedf8gcs4" path="res://scenes/board.tscn" id="1_qgxn0"]
+[ext_resource type="PackedScene" uid="uid://c0aed3nunbm4w" path="res://scenes/player.tscn" id="2_3hj8w"]
+
+[node name="game" type="Node3D"]
+
+[node name="GameManager" type="Node" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.0708803, 0.464872, -0.882536, 0.00908429, 0.885026, 0.465454, 0.997443, 0.0249743, -0.0669539, -5.02395, 4.72627, -0.14192)
+
+[node name="board" parent="." instance=ExtResource("1_qgxn0")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866121, 0.308951, -0.392916, 0, 0.786094, 0.618107, 0.499834, -0.535355, 0.680853, -1.56717, 2.56888, 2.17897)
+
+[node name="BoardContainer" type="Node3D" parent="."]
+
+[node name="player" parent="." instance=ExtResource("2_3hj8w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0154622, 1.22878, -0.0689046)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.523138, 0.852248, 0, -0.852248, 0.523138, 0, 7.37171, 2.86052)
