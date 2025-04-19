@@ -7,10 +7,13 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_74ctb"]
 
 [node name="player" type="CharacterBody3D"]
+transform = Transform3D(0.996798, 0, -0.0799555, 0, 1, 0, 0.0799555, 0, 0.996798, 0, 0, 0)
 script = ExtResource("1_bbkai")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.969927, 0, 0.243395, 0, 1, 0, -0.243395, 0, 0.969927, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_4cl0p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.758612, 0, 0.651543, 0, 1, 0, -0.651543, 0, 0.758612, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_74ctb")
