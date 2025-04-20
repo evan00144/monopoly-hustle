@@ -1,12 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://djmh4wank4v5h"]
+[gd_scene load_steps=5 format=3 uid="uid://djmh4wank4v5h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfgfp"]
+albedo_color = Color(0.0705882, 1, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_e2vuf"]
+material = SubResource("StandardMaterial3D_gfgfp")
 size = Vector3(2, 0.2, 1.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ad2ki"]
 size = Vector3(2, 0.2, 1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_c8lps"]
+
 [node name="Cell" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_e2vuf")
@@ -14,3 +22,30 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_ad2ki")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(-1.28168e-10, -0.999996, 0.00293214, -4.37112e-08, 0.00293214, 0.999996, -1, 0, -4.37114e-08, 0.884912, 0.120478, 0)
+text = "Test"
+font_size = 16
+
+[node name="small" type="Node3D" parent="."]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="small"]
+transform = Transform3D(0.312101, 0, 0, 0, 0.172677, 0, 0, 0, 0.2835, -0.515952, 0.204367, 0)
+use_collision = true
+mesh = SubResource("BoxMesh_c8lps")
+
+[node name="medium" type="Node3D" parent="."]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="medium"]
+transform = Transform3D(0.312101, 0, 0, 0, 0.172677, 0, 0, 0, 0.505598, 0.013292, 0.205687, -0.00722277)
+use_collision = true
+mesh = SubResource("BoxMesh_c8lps")
+
+[node name="big" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.8161, 0.992322, 0, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="big"]
+transform = Transform3D(0.312101, 0, 0, 0, 0.172677, 0, 0, 0, 0.2835, -0.515952, 0.204367, 0)
+use_collision = true
+mesh = SubResource("BoxMesh_c8lps")

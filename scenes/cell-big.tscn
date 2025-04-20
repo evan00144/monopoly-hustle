@@ -1,17 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://csdqf7i3uj5xj"]
+[gd_scene load_steps=4 format=3 uid="uid://csdqf7i3uj5xj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a6lcq"]
+albedo_color = Color(1, 0.12549, 1, 1)
+metallic = 1.0
+metallic_specular = 1.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_e2vuf"]
+material = SubResource("StandardMaterial3D_a6lcq")
 size = Vector3(2, 0.2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ad2ki"]
 size = Vector3(2, 0.2, 2)
 
 [node name="Cell" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_e2vuf")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0731694, 0)
 shape = SubResource("BoxShape3D_ad2ki")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(-1.28168e-10, -0.999996, 0.00293214, -4.37112e-08, 0.00293214, 0.999996, -1, 0, -4.37114e-08, -0.00408554, 0.120478, 0)
+text = "Test"

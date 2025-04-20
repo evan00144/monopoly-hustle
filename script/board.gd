@@ -1,21 +1,19 @@
 extends Node3D
 
-const BOARD_SIZE = 10
+var BOARD_SIZE = 10
 const SMALL_CELL_SIZE = Vector3(2, 0.2, 1.5)
 const BIG_CELL_SIZE = Vector3(2, 0.2, 2)
 
 var SmallCellScene = preload("res://scenes/cell.tscn")
 var BigCellScene = preload("res://scenes/cell-big.tscn")
 
-func _ready():
-	generate_board()
-
-
-func generate_board():
+func generate_board(cells_data):
+	BOARD_SIZE = cells_data.size() /4 
 	var positions = []
 	var rotations = []
 	var current_position = Vector3.ZERO
-	var position_adder = ((BIG_CELL_SIZE.x/2) + (SMALL_CELL_SIZE.z/2) + 0.2)
+	var gap = 0.2
+	var position_adder = ((BIG_CELL_SIZE.x/2) + (SMALL_CELL_SIZE.z/2) + gap)
 	print(BIG_CELL_SIZE.x)
 	print(SMALL_CELL_SIZE.z)
 	print(position_adder)
@@ -25,7 +23,7 @@ func generate_board():
 		if i == 0 or i == 1 or i == BOARD_SIZE - 1:
 			pos.z += position_adder if i > 0 else 0
 		else:
-			pos.z += SMALL_CELL_SIZE.z +0.2
+			pos.z += SMALL_CELL_SIZE.z + gap
 		current_position = pos
 		positions.append(pos)
 		rotations.append(Vector3(0, deg_to_rad(0), 0))
@@ -38,7 +36,7 @@ func generate_board():
 		elif (i == BOARD_SIZE - 1):
 			pos.x += position_adder
 		else:
-			pos.x += SMALL_CELL_SIZE.z + 0.2
+			pos.x += SMALL_CELL_SIZE.z + gap
 		current_position = pos
 		positions.append(pos)
 		rotations.append(Vector3(0, deg_to_rad(90), 0))
@@ -64,11 +62,10 @@ func generate_board():
 		cell.transform.origin = positions[i]
 		cell.rotation = rotations[i]
 		add_child(cell)
-
+		
+		
 		# Floating text label
-		var label = Label3D.new()
-		label.text = "Cell %d" % i
-		label.position = Vector3(0, 1.2, 0)
-		cell.add_child(label)
+		var label = cell.get_node('Label3D')
+		label.text = cells_data[i].name + " (" + cells_data[i].cell_type+")"
 
 	print(positions)
